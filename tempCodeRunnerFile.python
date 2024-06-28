@@ -1,0 +1,24 @@
+tially, pick 3 random comics
+# displayed_comics = pick_random_comics(comics)
+# displayed_comics_history.extend(displayed_comics)
+# print("Here are 3 random comics:")
+# display_comics(displayed_comics)
+
+# while True:
+#     user_likes = get_user_choices()
+#     user_likes_history.extend([displayed_comics[i - 1] for i in user_likes])
+
+#     # Generate a prompt with all comics and user preferences
+#     prompt = generate_prompt(comics, displayed_comics_history, user_likes_history)
+#     recommendations = get_recommendations(prompt)
+
+#     recommended_comics = [comics[i - 1] for i in recommendations]
+#     displayed_comics_history.extend(recommended_comics)
+#     print("Comics recommended for you:")
+#     display_comics(recommended_comics)
+
+#     if input("Continue? (yes/no): ").lower() != 'yes':
+#         break
+
+#     # Update displayed comics with recommendations for the next iteration
+#     displayed_comics

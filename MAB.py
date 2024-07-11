@@ -2,12 +2,10 @@ import pandas as pd
 import numpy as np
 import random
 
-# Load the data using the relative path
 data_train = pd.read_csv('./data/data_train.csv')
 data_test = pd.read_csv('./data/data_test.csv')
 features_item = pd.read_csv('./data/features_item.csv')
 
-# Print the column names to debug
 print("Columns in data_train:", data_train.columns)
 print("Columns in data_test:", data_test.columns)
 print("Columns in features_item:", features_item.columns)
@@ -68,16 +66,20 @@ average_reward = total_rewards / num_trials
 print(f'Average Reward: {average_reward}')
 
 # Use the trained value estimates to recommend items for each user in data_test
-recommendations = []
-for index, row in data_test.iterrows():
-    user_id = row['user_id']
+# recommendations = []
+# prev_user_id = 0
+# for index, row in data_test.iterrows():
+#     user_id = row['user_id']
+#     if user_id == prev_user_id:
+#         continue
     
-    # Select the best action (item) based on the current estimates
-    arm = select_action(user_id)  # This should be argmax(value_estimates) to always pick the best known item
+#     prev_user_id = user_id
+#     # Select the best action (item) based on the current estimates
+#     arm = select_action(user_id)  # This should be argmax(value_estimates) to always pick the best known item
     
-    recommended_item = features_item.iloc[arm]['item_id']
-    recommendations.append((user_id, recommended_item))
+#     recommended_item = features_item.iloc[arm]['item_id']
+#     recommendations.append((user_id, recommended_item))
 
 # Print or save the recommendations
-for user_id, recommended_item in recommendations:
-    print(f"Recommend item {recommended_item} for user {user_id}")
+# for user_id, recommended_item in recommendations:
+#     print(f"Recommend item {recommended_item} for user {user_id}")
